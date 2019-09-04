@@ -51,14 +51,14 @@ int main(){
 							gradoscels = temp;
 							gradosfahr = (temp * 9.0 / 5.0)+ 32.0;
 						}
-						cout << endl << endl << gradoscels <<' '<< gradosfahr<< endl<< endl;
+						//cout << endl << endl << gradoscels <<' '<< gradosfahr<< endl<< endl;
 
 						break;
 					}
 					case 'P':{
 						//getchar();
 						car = cin.peek();
-						if (car == 'H' || car == 'M' || car == 'S') {
+            					if (car == 'H' || car == 'M' || car == 'S') {
 							getchar();
 							tiempoprec= 0.0;
 							cantprec = 0.0;
@@ -92,9 +92,9 @@ int main(){
 					}
 				}
 			}
-			cout << endl << "Precipitacion " << tiempoprec << ' ' << cantprec;
-			cout << endl << "Temperatura " << gradoscels << ' ' << gradosfahr;
-			cout << endl << "Humedad " << humedad << "*********"; 
+			//cout << endl << "Precipitacion " << tiempoprec << ' ' << cantprec;
+			//cout << endl << "Temperatura " << gradoscels << ' ' << gradosfahr;
+			//cout << endl << "Humedad " << humedad << "*********"; 
 			cin >> anio;
 			mes = 0;
 			dia = 0;
@@ -128,7 +128,7 @@ int main(){
 			cout << fixed;
 
 			cout << right << setw(5) << gradoscels << "  " << setw(5) << gradosfahr;
-
+			
 		}
 	}
 	return 0;
