@@ -30,11 +30,16 @@ int main(){
 			putchar(car);
 		} else {
 			imprimirEspacios(MAX_CAR - cantcar);	
-			lineaimpresa = true;
 			cantcar = 0;
-			cout << left << setw(15) << codigociudad;
-			
+			cout << left << setw(12) << codigociudad;
+			while(1){
 			//Aqui comienza la lectura de los datos
+                if(lineaimpresa){
+                        imprimirEspacios(MAX_CAR + 15);                        
+                } else {
+                        lineaimpresa = true;
+                }
+
         		for(int i = 0; i < 3; i++){
 				cin >> ws;
 				tipodato = getchar();
@@ -122,13 +127,26 @@ int main(){
 			else
 				cout << mes << '/';
 
-			cout << left << setw(15) << anio;
+			cout << left << setw(10) << anio;
 
 			cout << setprecision(2);
 			cout << fixed;
 
-			cout << right << setw(5) << gradoscels << "  " << setw(5) << gradosfahr;
-			
+			cout << right << setw(5) << gradoscels << "  " << setw(7) << gradosfahr;
+		    cout << setw(17) << humedad;
+            cout << setw(17) << tiempoprec << setw(14) << cantprec << endl;
+
+            cin >> car;
+            if(cin.eof()){
+                return 0;
+            } 
+            if (car == '\n'){
+                    lineaimpresa = false;
+                    break;
+            }else{
+                    ungetc;                   
+            }           
+            }
 		}
 	}
 	return 0;
